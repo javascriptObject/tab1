@@ -22,32 +22,32 @@
 		<li>22222</li>
 	</ul>
 </body>
+</html>
 <!--<script src="js/jquery-2.1.4.js"></script>-->
 <script>
-	 window.onload = function(){
-	 	var oTad = document.getElementsByClassName("tad")[0];
-	 	var oLi = oTad.getElementsByTagName("li");
-	 	var oCon = document.getElementsByClassName("con")[0];
-	 	var oLi2 = oCon.getElementsByTagName("li");
-	 	for(var i=0;i<oLi.length;i++){
-	 		oLi[i].index = i;
-	 		oLi[i].onclick = function(){
-	 			for(var i=0;i<oLi.length;i++){
-	 				oLi[i].className = "";
-	 				oLi2[i].style.display = 'none';
-	 			}
-	 			this.className = "active";
-	 			oLi2[this.index].style.display = 'block';
-	 		}
-	 	}
-	 };
-//	$(function(){
-//		$('ul.tad li').click(function(){
-//			$('ul.tad li').attr('class','');
-//			$('ul.con li').css('display','none');
-//			$(this).attr('class','active');
-//			$('ul.con li').eq($(this).index()).css('display','block');
-//		});
-//	})
+	window.onload = function(){
+		var oTad = document.getElementsByClassName("tad")[0];
+		var oLi = oTad.getElementsByTagName("li");
+		var oCon = document.getElementsByClassName("con")[0];
+		var oLi2 = oCon.getElementsByTagName("li");
+		for(var i=0;i<oLi.length;i++){
+			oLi[i].index = i;
+			oLi[i].onclick = function(){
+				for(var i=0;i<oLi.length;i++){
+					oLi[i].className = "";
+					oLi2[i].style.display = 'none';
+				}
+				this.className = "active";
+				oLi2[this.index].style.display = 'block';
+			}
+		}
+	};
+	//	$(function(){
+	//		$('ul.tad li').click(function(){
+	//			$('ul.tad li').attr('class','');
+	//			$('ul.con li').css('display','none');
+	//			$(this).attr('class','active');
+	//			$('ul.con li').eq($(this).index()).css('display','block');
+	//		});
+	//	})
 </script>
-</html>
